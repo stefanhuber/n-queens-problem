@@ -8,6 +8,7 @@ class StochasticHillClimbing(m.Model):
         state_cost = self.cost
         next_state_canditates = []
 
+        # select all states which have a lower cost than current
         for next_state in helpers.generate_next_states(self.state):
             next_state_cost = len(helpers.find_attacking_pairs(next_state))
 

@@ -2,6 +2,9 @@ from models.basic_hill_climbing import BasicHillClimbing
 from models.steepest_ascent_hill_climbing import SteepestAscentHillClimbing
 from models.stochastic_hill_climbing import StochasticHillClimbing
 from models.simulated_annealing import SimulatedAnnealing
+from models.first_choice_hill_climbing import FirstChoiceHillClimbing
+from models.local_beam_search import LocalBeamSearch
+
 
 class Controller:
     def __init__(self, view):
@@ -23,6 +26,14 @@ class Controller:
             self.__model = StochasticHillClimbing()
         elif selection == "Simulated Annealing":
             self.__model = SimulatedAnnealing()
+        elif selection == "First Choice (Stochastic) Hill-Climbing":
+            self.__model = FirstChoiceHillClimbing()
+        elif selection == "Local Beam Search (k=2)":
+            self.__model = LocalBeamSearch(2)
+        elif selection == "Local Beam Search (k=3)":
+            self.__model = LocalBeamSearch(3)
+        elif selection == "Local Beam Search (k=4)":
+            self.__model = LocalBeamSearch(4)
 
         self.__model.generate_initial_state()
         self.draw()

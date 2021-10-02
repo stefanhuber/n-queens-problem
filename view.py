@@ -68,7 +68,11 @@ class View:
             "Basic Hill-Climbing",
             "Steepest Ascent Hill-Climbing",
             "Stochastic Hill-Climbing",
-            "Simulated Annealing"
+            "First Choice (Stochastic) Hill-Climbing",
+            "Simulated Annealing",
+            "Local Beam Search (k=2)",
+            "Local Beam Search (k=3)",
+            "Local Beam Search (k=4)",
         )
         self.__choice_var = tk.StringVar(self.__window, choices[0])
         self.__choice_var.trace("w", self.on_select)

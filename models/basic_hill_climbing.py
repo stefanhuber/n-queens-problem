@@ -5,7 +5,7 @@ class BasicHillClimbing(m.Model):
 
     def move_next(self):
         super().move_next()
-        state_cost = len(helpers.find_attacking_pairs(self.state))
+        state_cost = self.cost
 
         for next_state in helpers.generate_next_states(self.state):
             next_state_cost = len(helpers.find_attacking_pairs(next_state))

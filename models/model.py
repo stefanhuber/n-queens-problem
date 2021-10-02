@@ -20,7 +20,7 @@ class Model:
     def state(self, state):
         self.__state = state
 
-    def __init__(self, n=8):
+    def __init__(self):
         self.__state = []
         self.__step = 0
 
