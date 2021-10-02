@@ -17,8 +17,8 @@ Local search algorithms explore the state space with various techniques to find 
  - [x] Stochastic Hill-Climbing
  - [x] First-Choice (Stochastic) Hill-Climbing
  - [x] Simulated Annealing
- - [x] Beam Search
- - [ ] Stochastic Beam Search
+ - [x] Local Beam Search
+ - [ ] Stochastic Local Beam Search
  - [ ] Genetic Algorithm
 
 ## Usage
